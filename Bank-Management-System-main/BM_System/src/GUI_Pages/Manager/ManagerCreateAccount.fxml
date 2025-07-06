@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="def_pkg.Controllers.ManagerCon.CreateAccountController">
+    <Pane layoutX="-8.0" prefHeight="800" prefWidth="1200.0" style="-fx-background-color: #f5f7fa;">
+        <!-- Top Bar -->
+        <Pane prefHeight="100" prefWidth="1200" style="-fx-background-color: #4a6fa5; -fx-background-radius: 0 0 20 20;">
+            <Label layoutX="30" layoutY="25" style="-fx-text-fill: white; -fx-font-size: 28;" text="Create Account">
+                <font><Font name="Segoe UI Bold" size="28.0" /></font>
+            </Label>
+            <Button fx:id="backButton" layoutX="1050" layoutY="30" prefWidth="100" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white; -fx-border-radius: 15;" text="BACK" />
+        </Pane>
+
+        <!-- Input Form -->
+        <GridPane hgap="20.0" layoutX="150.0" layoutY="134.0" prefHeight="489.0" prefWidth="900.0" style="-fx-padding: 30; -fx-background-color: white; -fx-border-color: #dcdcdc; -fx-border-radius: 15; -fx-background-radius: 15;" vgap="40.0">
+            <!-- Row 0 -->
+            <Label style="-fx-font-size: 16;" text="First Name:" />
+            <Label style="-fx-font-size: 16;" text="Last Name:" GridPane.columnIndex="2" />
+
+            <!-- Row 1 -->
+            <Label style="-fx-font-size: 16;" text="CNIC:" GridPane.rowIndex="2" />
+            <Label style="-fx-font-size: 16;" text="Phone:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+
+            <!-- Row 2 -->
+            <Label style="-fx-font-size: 16;" text="Email:" GridPane.rowIndex="3" />
+            <Label style="-fx-font-size: 16;" text="Account Type:" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+
+            <!-- Row 4 -->
+            <Button fx:id="createButton" alignment="CENTER" prefWidth="200" style="-fx-background-color: #4a6fa5; -fx-text-fill: white; -fx-font-size: 16; -fx-border-radius: 10; -fx-background-radius: 10;" text="CREATE" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+            <TextField fx:id="firstNameField" prefWidth="300" GridPane.columnIndex="1" />
+            <TextField fx:id="cnicField" prefWidth="300" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="emailField" prefWidth="300" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="lastNameField" prefWidth="300" GridPane.columnIndex="3" />
+            <TextField fx:id="phoneField" prefWidth="300" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <ComboBox fx:id="accountTypeCombo" prefWidth="300" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+         <TextField fx:id="fathernameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         <Label style="-fx-font-size: 16;" text="Father Name:" GridPane.rowIndex="1" />
+         <Label style="-fx-font-size: 16;" text="Mother Name:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+         <TextField fx:id="mothernamefield" prefHeight="39.0" prefWidth="250.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+         <Label prefHeight="25.0" prefWidth="132.0" style="-fx-font-size: 16;" text="Date Of Birth:" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+         <DatePicker fx:id="datepicker" prefHeight="36.0" prefWidth="289.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+         <TextField fx:id="addressfield" prefHeight="25.0" prefWidth="277.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         <Label prefHeight="25.0" prefWidth="65.0" style="-fx-font-size: 16;" text="Address:" GridPane.rowIndex="4" />
+         <columnConstraints>
+            <ColumnConstraints maxWidth="150.0" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints maxWidth="250.0" />
+            <ColumnConstraints minWidth="10.0" prefWidth="150.0" />
+            <ColumnConstraints maxWidth="250.0" />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints maxHeight="25.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane>
+      <Label fx:id="createlabel" alignment="CENTER" layoutX="150.0" layoutY="640.0" prefHeight="40.0" prefWidth="900.0" style="-fx-text-fill: white; -fx-font-size: 28;">
+         <font>
+            <Font name="Century Gothic Bold" size="15.0" />
+         </font>
+      </Label>
+    </Pane>
+</AnchorPane>

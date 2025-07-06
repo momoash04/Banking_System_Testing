@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="807.0" prefWidth="1005.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="def_pkg.Controllers.LoginCon.LoginController">
+    <children>
+        <StackPane prefHeight="807.0" prefWidth="1005.0">
+         <children>
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="808.0" prefWidth="1005.0" style="-fx-background-color: linear-gradient(to bottom right, white, #002266);">
+               <children>
+                  <Pane fx:id="loginPanel" layoutX="563.0" layoutY="193.0" prefHeight="405.0" prefWidth="382.0" style="-fx-background-color: white; -fx-background-radius: 50;">
+                     <children>
+                        <Label layoutX="81.0" layoutY="33.0" text="Welcome Back" textFill="#212529">
+                           <font>
+                              <Font name="Segoe UI Bold" size="32.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="50.0" layoutY="100.0" text="Username" textFill="#212529">
+                           <font>
+                              <Font name="Century Gothic" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="usernameField" layoutX="50.0" layoutY="130.0" prefHeight="40.0" prefWidth="300.0" promptText="Enter Username" style="-fx-border-color: #c8c8c8; -fx-border-width: 1; -fx-border-radius: 5; -fx-padding: 5 10 5 10;">
+                           <font>
+                              <Font name="Segoe UI" size="16.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="50.0" layoutY="190.0" text="Password" textFill="#212529">
+                           <font>
+                              <Font name="Century Gothic" size="16.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="passwordField" layoutX="50.0" layoutY="220.0" prefHeight="40.0" prefWidth="300.0" promptText="Enter Password" style="-fx-border-color: #c8c8c8; -fx-border-width: 1; -fx-border-radius: 5; -fx-padding: 5 10 5 10;">
+                           <font>
+                              <Font name="Segoe UI" size="16.0" />
+                           </font>
+                        </PasswordField>
+                        <Button fx:id="loginButton" layoutX="50.0" layoutY="295.0" mnemonicParsing="false" onMouseClicked="#handleLogin" prefHeight="45.0" prefWidth="300.0" style="-fx-background-color: #0077b6; -fx-text-fill: white; -fx-background-radius: 5;" text="SIGN IN">
+                           <font>
+                              <Font name="Segoe UI Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Label layoutX="81.0" layoutY="360.0" text="Don't have an account?" textFill="#212529">
+                           <font>
+                              <Font name="Segoe UI" size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="signupButton" layoutX="231.0" layoutY="355.0" mnemonicParsing="false" onAction="#handleSignup" style="-fx-background-color: transparent; -fx-text-fill: #0077b6; -fx-underline: false;" text="Sign Up">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Label fx:id="loginerrorlabel" alignment="CENTER" layoutX="50.0" layoutY="268.0" prefHeight="17.0" prefWidth="300.0" text="error label" visible="false">
+                           <font>
+                              <Font name="Century Gothic Bold" size="12.0" />
+                           </font></Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutY="-6.0" opacity="0.75" prefHeight="820.0" prefWidth="538.0" style="-fx-background-color: #000435;">
+                     <children>
+                        <ImageView fitHeight="331.0" fitWidth="424.0" layoutX="71.0" layoutY="244.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/woman-got-approval-for-credit-card-application.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="140.0" fitWidth="120.0" layoutY="696.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/—Pngtree—thailand%20piggy%20bank_3699997.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="85.0" fitWidth="98.0" layoutX="441.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/piggybankflipped.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="82.0" layoutY="234.0" prefHeight="68.0" prefWidth="396.0" text="ASPIREBANK" textFill="WHITE">
+                           <font>
+                              <Font name="Century Gothic Bold Italic" size="52.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="42.0" layoutY="542.0" prefHeight="45.0" prefWidth="476.0" text="Banking Made Simple, Secure, and Smart." textFill="WHITE">
+                           <font>
+                              <Font name="Century Gothic Bold Italic" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="60.0" layoutY="24.0" prefHeight="27.0" prefWidth="98.0" text="ASPIREBANK" textFill="WHITE">
+                           <font>
+                              <Font name="Century Gothic Bold Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="45.0" fitWidth="44.0" layoutX="14.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/bank-ICON.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+        </StackPane>
+    </children>
+</AnchorPane>

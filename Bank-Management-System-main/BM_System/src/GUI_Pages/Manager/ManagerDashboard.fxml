@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="def_pkg.Controllers.ManagerCon.ManagerDashboardController">
+    <Pane prefHeight="700" prefWidth="1100" style="-fx-background-color: #f5f7fa;">
+
+        <!-- Header -->
+        <Pane prefHeight="100" prefWidth="1100" style="-fx-background-color: #4a6fa5; -fx-background-radius: 0 0 20 20;">
+            <Label fx:id="welcomeLabel" layoutX="30" layoutY="25" style="-fx-text-fill: white; -fx-font-size: 24;" text="Welcome!">
+                <font>
+                    <Font name="Segoe UI Bold" size="24.0" />
+                </font>
+            </Label>
+            <Label layoutX="30.0" layoutY="66.0" style="-fx-text-fill: #e0e0e0; -fx-font-size: 14;" text="Manager Dashboard" />
+
+            <Button fx:id="signOutButton" layoutX="950" layoutY="30" style="-fx-background-color: #3a5a80; -fx-text-fill: white; -fx-background-radius: 10;" text="SIGN OUT">
+                <font>
+                    <Font name="Segoe UI Bold" size="12.0" />
+                </font>
+            </Button>
+        </Pane>
+
+        <!-- Main Content -->
+        <Pane layoutX="20" layoutY="120" prefHeight="550" prefWidth="1060">
+            <!-- Left Panel - Quick Actions -->
+            <Pane layoutX="0" layoutY="0" prefHeight="550" prefWidth="300" style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);">
+                <Label layoutX="20" layoutY="20" style="-fx-text-fill: #4a6fa5; -fx-font-size: 16; -fx-font-weight: bold;" text="MANAGER ACTIONS" />
+
+                <VBox layoutX="20" layoutY="60" spacing="15">
+                    <Button fx:id="CreateAccountBtn" prefHeight="45" prefWidth="260" style="-fx-background-color: #e3f2fd; -fx-text-fill: #1976d2; -fx-background-radius: 10; -fx-font-weight: bold;" text="Create Account" />
+               <Button fx:id="blockUnblockBtn" prefHeight="45" prefWidth="260" style="-fx-background-color: #e3f2fd; -fx-text-fill: #1976d2; -fx-background-radius: 10; -fx-font-weight: bold;" text="Block/Unblock Account" />
+               <Button fx:id="UpdateAccountBtn" prefHeight="45" prefWidth="260" style="-fx-background-color: #e3f2fd; -fx-text-fill: #1976d2; -fx-background-radius: 10; -fx-font-weight: bold;" text="Update Account Info" />
+                </VBox>
+            </Pane>
+
+            <!-- Right Panel - Content Area -->
+            <Pane layoutX="320" layoutY="0" prefHeight="550" prefWidth="740" style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);">
+                <!-- Statistics Overview -->
+                <Pane layoutX="20" layoutY="20" prefHeight="180" prefWidth="700" style="-fx-background-color: #f0f4f9; -fx-background-radius: 10;">
+                    <Label layoutX="20" layoutY="15" style="-fx-text-fill: #4a6fa5; -fx-font-size: 16; -fx-font-weight: bold;" text="BANK STATISTICS" />
+
+                    <GridPane hgap="70.0" layoutX="20.0" layoutY="66.0" vgap="15">
+                        <columnConstraints>
+                            <ColumnConstraints maxWidth="253.33331298828125" minWidth="191.33331298828125" prefWidth="200.66668701171875" />
+                            <ColumnConstraints maxWidth="209.33335367838538" minWidth="147.33335367838538" prefWidth="199.99997965494788" />
+                        </columnConstraints>
+
+                        <Label style="-fx-text-fill: #666; -fx-font-size: 14; -fx-font-weight: bold;" text="Total Accounts:" />
+                        <Label fx:id="totalAccountsLabel" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="197.0" style="-fx-text-fill: #333; -fx-font-size: 16; -fx-font-weight: bold;" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                     <GridPane.margin>
+                        <Insets right="10.0" />
+                     </GridPane.margin></Label>
+
+                        <Label style="-fx-text-fill: #666; -fx-font-size: 14; -fx-font-weight: bold;" text="Employees:" GridPane.columnIndex="1" />
+                        <Label fx:id="totalEmployeesLabel" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="187.0" style="-fx-text-fill: #333; -fx-font-size: 16; -fx-font-weight: bold;" GridPane.columnIndex="1">
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding></Label>
+                  <rowConstraints>
+                     <RowConstraints />
+                     <RowConstraints />
+                  </rowConstraints>
+                    </GridPane>
+                </Pane>
+
+                <!-- Recent Activity Table -->
+                <Label layoutX="20" layoutY="220" prefHeight="25.0" prefWidth="135.0" style="-fx-text-fill: #4a6fa5; -fx-font-size: 16; -fx-font-weight: bold;" text="QUICK ACTIONS" />
+            <VBox alignment="CENTER" layoutX="105.0" layoutY="273.0" prefHeight="239.0" prefWidth="200" spacing="10" style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);">
+               <children>
+                  <ImageView fitHeight="53.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/profile.png" />
+                     </image>
+                  </ImageView>
+                  <Label style="-fx-text-fill: #4a6fa5; -fx-font-size: 16; -fx-font-weight: bold;" text="Create Account" />
+                  <Button fx:id="CreateAccountBtn2" prefWidth="100" style="-fx-background-color: #4a6fa5; -fx-text-fill: white; -fx-background-radius: 5;" text="CREATE" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="389.0" layoutY="273.0" prefHeight="239.0" prefWidth="200.0" spacing="10" style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);">
+               <children>
+                  <ImageView fitHeight="53.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/close_FILL0_wght400_GRAD0_opsz24.png" />
+                     </image>
+                  </ImageView>
+                  <Label style="-fx-text-fill: #4a6fa5; -fx-font-size: 16; -fx-font-weight: bold;" text="Block/Unblock Account" />
+                  <Button fx:id="blockUnblockBtn2" prefWidth="100" style="-fx-background-color: #4a6fa5; -fx-text-fill: white; -fx-background-radius: 5;" text="OPEN" />
+               </children>
+            </VBox>
+            </Pane>
+        </Pane>
+    </Pane>
+</AnchorPane>
