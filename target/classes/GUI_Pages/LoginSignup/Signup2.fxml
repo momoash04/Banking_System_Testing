@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="def_pkg.Controllers.LoginCon.Signup2Controller">
+    <children>
+        <StackPane prefHeight="600.0" prefWidth="800.0">
+            <children>
+                <!-- Background with gradient -->
+                <Pane style="-fx-background-color: linear-gradient(to bottom right, white, #002266);">
+                    <children>
+                        <!-- Back Button -->
+                        <Button fx:id="backButton" layoutX="20.0" layoutY="20.0" mnemonicParsing="false" onAction="#handleBack" style="-fx-background-color: transparent; -fx-text-fill: #0077b6;" text="← Back">
+                            <font>
+                                <Font name="Segoe UI" size="16.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
+
+                        <!-- Create Account Panel -->
+                        <Pane fx:id="createPanel" layoutX="200.0" layoutY="50.0" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: white; -fx-background-radius: 50;">
+                            <children>
+                                <Label layoutX="85.0" layoutY="14.0" text="Create Account" textFill="#212529">
+                                    <font>
+                                        <Font name="Segoe UI Bold" size="32.0" />
+                                    </font>
+                                </Label>
+
+                                <Label layoutX="50.0" layoutY="68.0" text="Username" textFill="#212529">
+                                    <font>
+                                        <Font name="Century Gothic" size="16.0" />
+                                    </font>
+                                </Label>
+
+                                <TextField fx:id="usernameField" layoutX="50.0" layoutY="98.0" prefHeight="40.0" prefWidth="300.0" promptText="Enter your username" style="-fx-border-color: #c8c8c8; -fx-border-width: 1; -fx-border-radius: 5; -fx-padding: 5 10 5 10;">
+                                    <font>
+                                        <Font name="Segoe UI" size="16.0" />
+                                    </font>
+                                </TextField>
+
+                                <Label layoutX="50.0" layoutY="158.0" text="Password" textFill="#212529">
+                                    <font>
+                                        <Font name="Century Gothic" size="16.0" />
+                                    </font>
+                                </Label>
+
+                                <PasswordField fx:id="passwordField" layoutX="50.0" layoutY="188.0" prefHeight="40.0" prefWidth="300.0" promptText="Enter new password " style="-fx-border-color: #c8c8c8; -fx-border-width: 1; -fx-border-radius: 5; -fx-padding: 5 10 5 10;">
+                                    <font>
+                                        <Font name="Segoe UI" size="16.0" />
+                                    </font>
+                                </PasswordField>
+
+                                <Label layoutX="50.0" layoutY="248.0" text="Confirm Password" textFill="#212529">
+                                    <font>
+                                        <Font name="Century Gothic" size="16.0" />
+                                    </font>
+                                </Label>
+
+                                <PasswordField fx:id="confirmPasswordField" layoutX="50.0" layoutY="278.0" prefHeight="40.0" prefWidth="300.0" promptText="Enter confirmed password" style="-fx-border-color: #c8c8c8; -fx-border-width: 1; -fx-border-radius: 5; -fx-padding: 5 10 5 10;">
+                                    <font>
+                                        <Font name="Segoe UI" size="16.0" />
+                                    </font>
+                                </PasswordField>
+
+                                <!-- Password Strength Bar -->
+                                <ProgressBar fx:id="strengthBar" layoutX="50.0" layoutY="326.0" prefHeight="11.0" prefWidth="300.0" progress="0.0" style="-fx-accent: red; -fx-control-inner-background: transparent;" />
+
+                                <Button fx:id="createAccountButton" layoutX="50.0" layoutY="390.0" mnemonicParsing="false" onAction="#handleCreateAccount" prefHeight="45.0" prefWidth="300.0" style="-fx-background-color: #0077b6; -fx-text-fill: white; -fx-background-radius: 5;" text="CREATE ACCOUNT">
+                                    <font>
+                                        <Font name="Segoe UI Bold" size="16.0" />
+                                    </font>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </Button>
+                        <Label fx:id="usererrorLabel" alignment="CENTER" layoutX="50.0" layoutY="359.0" prefHeight="17.0" prefWidth="300.0" text="error label" visible="false">
+                           <font>
+                              <Font name="Century Gothic Bold" size="12.0" />
+                           </font></Label>
+                            </children>
+                        </Pane>
+                    </children>
+                </Pane>
+            </children>
+        </StackPane>
+    </children>
+</AnchorPane>
