@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="def_pkg.Controllers.ManagerCon.BlockUnblockController">
+    <Pane prefHeight="700" prefWidth="1100" style="-fx-background-color: #f5f7fa;">
+        <Pane prefHeight="100" prefWidth="1100" style="-fx-background-color: #4a6fa5; -fx-background-radius: 0 0 20 20;">
+            <Label layoutX="30" layoutY="25" style="-fx-text-fill: white; -fx-font-size: 24;" text="Block/Unblock Account">
+                <font><Font name="Segoe UI Bold" size="24.0" /></font>
+            </Label>
+            <Button fx:id="backButton" layoutX="950" layoutY="30" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white; -fx-border-radius: 15;" text="BACK" />
+        </Pane>
+
+        <GridPane hgap="10" layoutX="350" layoutY="150" prefHeight="153.0" prefWidth="401.0" vgap="15">
+            <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="185.0" text="Account Number:">
+            <font>
+               <Font name="Century Gothic" size="18.0" />
+            </font></Label>
+            <TextField fx:id="accountNumberField" promptText="Enter Account number:" GridPane.columnIndex="2" />
+            <Label alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="185.0" text="Action:" GridPane.rowIndex="1">
+            <font>
+               <Font name="Century Gothic" size="18.0" />
+            </font></Label>
+            <ComboBox fx:id="actionCombo" prefHeight="25.0" prefWidth="185.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button fx:id="submitButton" prefHeight="25.0" prefWidth="185.0" text="SUBMIT" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+         <columnConstraints>
+            <ColumnConstraints prefWidth="200.0" />
+            <ColumnConstraints />
+            <ColumnConstraints prefWidth="200.0" />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane>
+      <Label fx:id="messagelabel" alignment="CENTER" layoutX="367.0" layoutY="291.0" prefHeight="25.0" prefWidth="373.0">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font>
+      </Label>
+    </Pane>
+</AnchorPane>
